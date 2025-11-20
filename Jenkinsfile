@@ -6,9 +6,10 @@ pipeline {
             steps {
                 script {
                     // Build and push Docker image
+                    bat 'docker login -u rvnthh88 -p revanth59'
                     bat 'docker build -t w9-dd-app:latest .'
-                    bat 'docker tag w9-dd-app:latest wilsonbolledula/w9-dh-app:latest'
-                    bat 'docker push wilsonbolledula/w9-dh-app:latest'
+                    bat 'docker tag w9-dd-app:latest rvnthh88/w9-dh-app:latest'
+                    bat 'docker push rvnthh88/w9-dh-app:latest'
                 }
             }
         }
